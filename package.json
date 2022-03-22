@@ -6,6 +6,9 @@
   "author": {
     "name": ""
   },
+  "scripts": {
+    "start": "nodemon app.js"
+  },
   "dependencies": {
     "body-parser": "^1.19.2",
     "dotenv": "^16.0.0",
