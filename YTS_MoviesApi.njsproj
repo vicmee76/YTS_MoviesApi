@@ -28,12 +28,29 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include=".env" />
+    <Content Include="api\controllers\movies_controller.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="api\routes\movies_route.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="api\services\get_movies_list_service.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="app.js" />
+    <Content Include="helpers\helpersFunctions.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="package.json" />
     <Content Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="api\" />
+    <Folder Include="api\controllers\" />
+    <Folder Include="api\services\" />
+    <Folder Include="api\routes\" />
+    <Folder Include="helpers\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
 </Project>
