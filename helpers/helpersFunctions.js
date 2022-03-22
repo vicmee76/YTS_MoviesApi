@@ -7,11 +7,14 @@ exports._showError = (code, res, err) => {
 };
 
 
-exports._showMovieList = (movies, res, code, msg) => {
+exports._showMovieList = (movies, res, code, response) => {
     return res.status(code).json({
         success: true,
-        messgae: "Success : " + msg,
-        results: movies.map(x => {
+        messgae: "Success : " + response.status_message,
+        movies_count: response.data.movie_count,
+        limit: response.data.limit,
+        page_number: response.data.page_number,
+        movies: movies.map(x => {
             return {
                 Id: x.id,
                 slug: x.slug,
