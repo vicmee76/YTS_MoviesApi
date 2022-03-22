@@ -35,7 +35,7 @@
     <Content Include="api\routes\movies_route.js">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="api\services\movies_service.js">
+    <Content Include="api\services\get_movies_list_service.js">
       <SubType>Code</SubType>
     </Content>
     <Content Include="app.js" />

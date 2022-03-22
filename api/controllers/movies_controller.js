@@ -1,6 +1,12 @@
-const moviesService = require("../services/movies_service");
+const {
+    getMoviesListService
+}= require("../services/get_movies_list_service");
 
 
-exports.getMovies = async () => {
+exports.getMoviesList = async (req, res) => {
 
+    let response = await getMoviesListService({ quality: "3D", });
+    console.log(response);
+    
+   
 };
