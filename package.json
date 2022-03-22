@@ -1,0 +1,9 @@
+{
+  "name": "yts_movies-api",
+  "version": "0.0.0",
+  "description": "YTS_MoviesApi",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  }
+}
