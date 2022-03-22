@@ -39,6 +39,9 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="app.js" />
+    <Content Include="helpers\helpersFunctions.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="package.json" />
     <Content Include="README.md" />
   </ItemGroup>
@@ -47,6 +50,7 @@
     <Folder Include="api\controllers\" />
     <Folder Include="api\services\" />
     <Folder Include="api\routes\" />
+    <Folder Include="helpers\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
 </Project>
