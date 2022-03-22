@@ -1,27 +1,27 @@
+const helpers = require("../../helpers/helpersFunctions");
 const {
     getMoviesListService
 }= require("../services/get_movies_list_service");
 
 
 exports.getMoviesList = async (req, res) => {
+
     let query = { quality: "3D", limit: 5 }
     let response = await getMoviesListService(query);
-
     let status = response.status;
-
     if (status === "ok") {
         let data = response.data;
-        let movie = data.movie;
+        let movie = data.movies;
 
         if (data.movie_count > 0) {
-            res.status
+            helpers._showMovieList(movie, res, 200, response.status_message);
         }
         else {
-            // not found
+            helpers._showError(404, res, "Not found");
         }
     }
     else {
-        // something went wrong.
+        helpers._showError(400, res, response.status_message);
     }
 
 };
