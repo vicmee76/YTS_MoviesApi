@@ -1,11 +1,15 @@
+const url = require('url');
 const helpers = require("../../helpers/helpersFunctions");
 const {
     getMoviesListService
 }= require("../services/get_movies_list_service");
 
 
-exports.getMoviesList = async (req, res) => {
-    let response = await getMoviesListService();
+exports.getAllMoviesList = async (req, res) => {
+
+    let queryObject = url.parse(req.url, true).query;
+    console.log(queryObject);
+    let response = await getMoviesListService(queryObject);
     let status = response.status;
     if (status === "ok") {
         let data = response.data;
