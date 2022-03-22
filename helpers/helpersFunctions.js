@@ -36,6 +36,7 @@ exports._showMovieList = (movies, res, code, response) => {
                         uploadedAt: c.date_uploaded
                     }
                 }),
+                description: x.description_full
             }
         })
     });
