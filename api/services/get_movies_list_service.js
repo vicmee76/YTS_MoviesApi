@@ -10,7 +10,18 @@ module.exports = {
             return res.data;
         }
         catch (err) {
-            return await err;
+            return await err.message;
         }
     },
+
+
+    getMovieDetailsService: async (id) => {
+        try {
+            let res = await axios.get(url + "/movie_details.json?movie_id=" + id);
+            return res.data;
+        }
+        catch (err) {
+            return await err.message;
+        }
+    }
 }
