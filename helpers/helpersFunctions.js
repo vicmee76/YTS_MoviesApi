@@ -17,9 +17,6 @@ exports._showMovieList = (movies, res, code, response) => {
         movies: movies.map(x => {
             return {
                 Id: x.id,
-                slug: x.slug,
-                state: x.state,
-                langauge: x.langauge,
                 url: x.url,
                 title: x.title,
                 year: x.year,
@@ -27,16 +24,23 @@ exports._showMovieList = (movies, res, code, response) => {
                 genres: x.genres,
                 imageCover: x.medium_cover_image,
                 backgroundImage: x.background_image_original,
-                torrents: x.torrents.map(c => {
-                    return {
-                        url: c.url,
-                        type: c.type,
-                        quality: c.quality,
-                        size: c.size,
-                        uploadedAt: c.date_uploaded
-                    }
-                }),
-                description: x.description_full
+                MovieDetail: {
+                    type: "GET",
+                    link: "http://localhost:5300/api/movies/get-movie-detail/" + x.id
+                },
+                MovieSuggestions: {
+                    type: "GET",
+                    link: "http://localhost:5300/api/movies/get-movie-suggestions/" + x.id
+                },
+                MovieComment: {
+                    type: "GET",
+                    link: "http://localhost:5300/api/movies/get-movie-comments/" + x.id
+                },
+                MovieReviews: {
+                    type: "GET",
+                    link: "http://localhost:5300/api/movies/get-movie-reviews/" + x.id
+                }
+
             }
         })
     });

@@ -8,7 +8,6 @@ const {
 exports.getAllMoviesList = async (req, res) => {
 
     let queryObject = url.parse(req.url, true).query;
-    console.log(queryObject);
     let response = await getMoviesListService(queryObject);
     let status = response.status;
     if (status === "ok") {
