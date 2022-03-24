@@ -31,14 +31,6 @@ exports._showMovieList = (movies, res, code, response) => {
                 MovieSuggestions: {
                     type: "GET",
                     link: "http://localhost:5300/api/movies/get-movie-suggestions/" + x.id
-                },
-                MovieComment: {
-                    type: "GET",
-                    link: "http://localhost:5300/api/movies/get-movie-comments/" + x.id
-                },
-                MovieReviews: {
-                    type: "GET",
-                    link: "http://localhost:5300/api/movies/get-movie-reviews/" + x.id
                 }
             }
         })
@@ -75,14 +67,6 @@ exports._showMovieDetails = (movies, res, code, response) => {
                 type: "GET",
                 link: "http://localhost:5300/api/movies/get-movie-suggestions/" + movies.id
             },
-            MovieComment: {
-                type: "GET",
-                link: "http://localhost:5300/api/movies/get-movie-comments/" + movies.id
-            },
-            MovieReviews: {
-                type: "GET",
-                link: "http://localhost:5300/api/movies/get-movie-reviews/" + movies.id
-            }
         }
     });
 };

@@ -33,7 +33,6 @@ exports.getAllMoviesList = async (req, res) => {
 };
 
 
-
 exports.getMovieDetails = async (req, res) => {
     try {
         let id = req.params.id
@@ -62,7 +61,6 @@ exports.getMovieDetails = async (req, res) => {
         helpers._showError(500, res, err.message);
     }
 };
-
 
 
 exports.getMovieSuggestions = async (req, res) => {

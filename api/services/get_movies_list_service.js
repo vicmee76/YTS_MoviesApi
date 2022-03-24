@@ -25,6 +25,7 @@ module.exports = {
         }
     },
 
+
     getMovieSuggestionsService: async (id) => {
         try {
             let res = await axios.get(url + "/movie_suggestions.json?movie_id=" + id);
