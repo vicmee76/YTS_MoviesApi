@@ -23,5 +23,16 @@ module.exports = {
         catch (err) {
             return await err.message;
         }
-    }
+    },
+
+
+    getMovieSuggestionsService: async (id) => {
+        try {
+            let res = await axios.get(url + "/movie_suggestions.json?movie_id=" + id);
+            return res.data;
+        }
+        catch (err) {
+            return await err.message;
+        }
+    },
 }
