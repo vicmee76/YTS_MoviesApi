@@ -40,7 +40,6 @@ exports._showMovieList = (movies, res, code, response) => {
                     type: "GET",
                     link: "http://localhost:5300/api/movies/get-movie-reviews/" + x.id
                 }
-
             }
         })
     });
