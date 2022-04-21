@@ -60,6 +60,7 @@ exports.getMovieDetails = async (req, res) => {
     catch (err) {
         helpers._showError(500, res, err.message);
     }
+    
 };
 
 
